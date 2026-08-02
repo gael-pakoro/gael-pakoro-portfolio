@@ -1,0 +1,96 @@
+<!-- Ceci est un commentaire HTML, il ne s'affiche pas dans le navigateur -->
+ 
+<!DOCTYPE html>
+<html lang="fr">
+ 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAKORO Gaël Portfolio SIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+  </head>
+ 
+  <body>
+    <header>
+      <nav>
+          <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="apropos.html">A propos</a></li>
+              <li><a href="competences.html">Competences</a></li>
+              <li><a href="Projets.html">Mes projets</a></li>
+          </ul>
+      </nav><br>
+      <h1>Bienvenue sur mon Portfolio</h1>
+      <img src="Ma_photo_pro.jpeg" alt="Ma_photo_pro" width="200"> 
+      <p>Gaël PAKORO étudiant en 1ère année du BTS SIO — Option SLAM</p>
+    </header>
+ 
+    <main>
+        <h2>Infos sur moi</h2>
+        <div class="Moi">
+        <p>Je suis née le 24 septembre 2006. Un jour de plus et je serai née le même jours que Will Smith.(Quel Tristesse :[)
+         </p>
+      </div>
+      <h2>Qui suis-je ?</h2>
+      <div class="qui">
+        <p>J'ai fait un Bac Technologique STMG au Lycée Grand Nouméa. <br>
+        J'habite à Tamoa.<br>
+        Dans mon temps libre, j’aime lire, dessiner et écouter de la musique.
+       </p>
+      </div>
+      <h2>Mes points forts</h2>
+      <div class="points">
+      <ul>
+        <li>J'ai un niveau B1 en Anglais</li>
+        <li>J’ai les bases dans l’utilisation du logiciel Pack Office (Word, PowerPoint, Excel…).</li>
+        <li>J’ai également quelques bases sur l’utilisation de Canva.</li>
+        <li>J'ai que <strong>261</strong> points Pix.</li>
+        <li>J'ai des bases en langage <em>python</em>.</li>
+        <li>J'ai des bases en langage <em>html</em> et <em>css</em>.</li>
+        <li>J'ai une certification Cisco sur "Les bases du matériel informatique".</li>
+      </ul>
+      </div>
+      <h2>Mes Loisirs</h2>
+      <div class="loisirs-container">
+        <div class="lecture" onclick="toggleDetails(this)">
+          <img src="Hunter-X-Hunter-Tome-11.jpg" alt="Manga" width="300">
+          <p><strong>Lecture:</strong></p><br>
+          <p>En ce moment, je lis beaucoup.</p>
+          <div class="details_lecture">
+            <p> J’ai tendance à rester sur les mêmes genres, mais j’essaie de changer un peu.<br> 
+                J’aime lire des <em>romans</em>, des <em>comics</em>, des <em>mangas</em>, des <em>bandes dessinées</em> et des <em>thrillers</em>.<br> 
+                Je viens tout juste de me mettre à ce type de lectures.<br>
+                Au début de l’année, j’ai rejoint le club lecture de mon lycée par simple curiosité,<br> et c’est grâce à lui que j’essaie maintenant de découvrir un maximum de genres différents.</p>
+          </div>
+        </div>    
+        <div class="Music" onclick="toggleDetails(this)">
+          <img src="Linkin_Park.jpg" alt="music" width="300">
+            <p><strong>Music:</strong></p><br>
+            <p>Depuis tout petit, écouter de la musique fait partie de ce que je préfère.</p>
+            <div class="details_music">
+                <p>J'écoute un peu de tout. De la <em>pop</em>, du <em>rock</em>, du <em>rap</em>, du <em>reggae</em>, du <em>lofi</em>, des <em>musiques d'ambiances</em>...<br>
+                Bref j'écoute de tout, en se moment j'écoute des musiques pops et rocks des années 90s et 2000s.</p>
+            </div>
+        </div>
+        <div class="Dessin" onclick="toggleDetails(this)">
+          <img src="Dessin.png" alt="dessin" width="300">
+          <p><strong>Dessiner:</strong></p>
+          <p>J'aime bien dessiner dans mon temp libre, même si j'avoue que mes dessin ne sont pas parfait.</p>
+          <div class="details_dessin">
+            <p>Depuis un moment, j'ai repris une vieille habitude du collège qui est de dessiner.<br> 
+              Mes dessins sont très nul mais c'est surtout la sensation quand tu commences par faire un très
+              qui une minutes après peux devenir un truc cool voir complètement habsurbe selon l'humeurs.<br> 
+              Même si c'est nul et imparfait.<br>
+              Attention je suis pas un artiste, je sais qu'un vrai pro en dessin verrai mes feuilles et les aurait déchirer parce que je dessine mal. </p>
+          </div>
+        </div>
+      </div>
+    </main>
+ 
+    <footer>
+      <p>© 2026 — Mon Portfolio SIO</p>
+    </footer>
+  <script src="Jscript.js"></script>
+  </body>
+</html>
