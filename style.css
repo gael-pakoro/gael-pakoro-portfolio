@@ -227,18 +227,12 @@ h2 {
   transition: max-height 0.3s ease;
 }
 
-.titre_parcours {
-  position: relative;
-  right: 450px;
-}
 .parcours {
   background: #ffffff;
   border-bottom: 2px solid #206012;
   border-left: 50px solid #206012;
   border-right: 2px solid #206012;
   border-top: 2px solid #206012;
-  position: relative;
-  right: 450px;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 10px;
@@ -250,6 +244,7 @@ h2 {
 .parcours:hover { 
   transform: translateY(-4px);
 } 
+
 .points {
   background: #ffffff;
   border-bottom: 2px solid #206012;
@@ -286,24 +281,9 @@ h2 {
   transform: translateY(-4px);
 } 
 
-.tableau{
-  position: relative;
-  bottom: 360px;
-  left: 450px;
-}
-table {
-  transition: transform 0.2s;
-}
-table:hover { 
-  transform: translateY(-4px);
-} 
-
 table {
     border-collapse: collapse;
     background: #a5a5a2;
-    position: relative;
-    bottom: 355px;
-    left: 450px;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 10px;
@@ -314,6 +294,45 @@ td {
     border: 3px solid #206012; 
 }
 
+table {
+  transition: transform 0.2s;
+}
+table:hover { 
+  transform: translateY(-4px);
+} 
+.titre_contacts {
+  border-left: 2px solid #286b7b;
+}
+.Contacts {
+  background: #ffffff;
+  border-bottom: 20px solid #206012;
+  border-left: 2px solid #206012;
+  border-right: 2px solid #206012;
+  border-top: 20px solid #206012;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+ }
+.Contacts {
+  transition: transform 0.2s;
+}
+.Contacts:hover { 
+  transform: translateY(-4px);
+} 
+.apropos-container {
+  display: flex;
+  gap: 40px;        /* espace entre les deux blocs */
+  align-items: flex-start; /* alignement en haut */
+  justify-content: center; /* centrer sur la page */
+  flex-wrap: wrap;  /* pour que ça s’adapte sur petit écran */
+}
+.parcours-block,
+.formation-block {
+  width: 45%; /* ou 40%, ou 50% selon ton design */
+  min-width: 300px; /* pour éviter que ça casse sur petit écran */
+}
 .projets {
   background: #ffffff;
   border-bottom: 2px solid #206012;
@@ -329,30 +348,6 @@ td {
   transition: transform 0.2s;
 }
 .projets:hover { 
-  transform: translateY(-4px);
-} 
-.titre_Contacts {
-  position: relative;
-  bottom: 320px;
-}
-.Contacts {
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 50px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  position: relative;
-  bottom: 320px;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
- }
-.Contacts {
-  transition: transform 0.2s;
-}
-.Contacts:hover { 
   transform: translateY(-4px);
 } 
 
@@ -391,6 +386,17 @@ td {
 .Chifumi:hover { 
   transform: translateY(-4px);
 } 
+
+button {
+  background:#286b7b;
+  text-decoration: none ;
+  color:#ffffff;
+  padding:13px 30px;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: .4s;
+}
+    
 /* ===== FOOTER ===== */
 footer {
   background-color: #000000;
@@ -399,8 +405,103 @@ footer {
 
 @media (max-width: 600px) {
    nav ul { 
-    flex-direction: column; 
-  } 
+    img{
+  border : 3px solid #000000;
+}
+ /* ===== NAVIGATION ===== */
+nav {
+  margin-top: 15px;
+}
+ 
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+}
+ 
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+/* ===== HEADER ===== */
+header {
+  padding: 20px 15px;
+  min-height: 180px;
+}
+ 
+header h1 {
+  font-size: 1.4rem;
+}
+ 
+/* ===== CONTENU PRINCIPAL ===== */
+main {
+  margin: 20px auto;
+  padding: 0 12px;
+}
+
+.Moi, .qui, .parcours, .points, .competence, .projets {
+    border-left-width: 15px;
+    padding: 15px;
+  }
+
+.loisirs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+.loisir-card {
+    width: 100%;
+    min-height: auto;
+  }
+
+.lecture, .Music, .Dessin {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    border-top-width: 10px;
+    border-bottom-width: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* tes valeurs 500px/100px étaient invalides */
+  }
+
+.lecture.open, .Music.open, .Dessin.open {
+    width: 100%;
+    transform: translateY(-4px) scale(1);
+  }
+
+  /* ===== TABLEAU ===== */
+  table {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  /* ===== CONTACTS ===== */
+  .Contacts {
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    padding: 15px;
+  }
+
+  /* ===== A PROPOS ===== */
+  .apropos-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .parcours-block,
+  .formation-block {
+    width: 100%;
+    min-width: unset;
+  }
 }
 @keyframes fadeIn {
    from{
