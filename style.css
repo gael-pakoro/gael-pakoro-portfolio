@@ -13,8 +13,16 @@ body {
 }
 
 img{
-  border : 3px solid #000000;
+  border: 3px solid #000000;
+  max-width: 100%;
+  height: auto;
 }
+
+header img {
+  display: block;
+  margin: 0 auto;
+} 
+
  /* ===== NAVIGATION ===== */
 nav {
   margin-top: 15px;
@@ -403,106 +411,102 @@ footer {
   color: white;
   text-align: center;}
 
-@media (max-width: 600px) {
-   nav ul { 
-    img{
-  border : 3px solid #000000;
-}
- /* ===== NAVIGATION ===== */
-nav {
-  margin-top: 15px;
-}
- 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  padding: 0;
-}
- 
-nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 6px 12px;
-  font-size: 0.9rem;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
+@media (max-width: 768px) {
 
-/* ===== HEADER ===== */
-header {
-  padding: 20px 15px;
-  min-height: 180px;
-}
- 
-header h1 {
-  font-size: 1.4rem;
-}
- 
-/* ===== CONTENU PRINCIPAL ===== */
-main {
-  margin: 20px auto;
-  padding: 0 12px;
-}
-
-.Moi, .qui, .parcours, .points, .competence, .projets {
-    border-left-width: 15px;
-    padding: 15px;
+ nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
-.loisirs-container {
+  header {
+    padding: 20px;
+    min-height: 200px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 0 15px;
+    margin: 20px auto;
+  }
+
+  /* Cartes de loisirs : passage en pleine largeur */
+  .loisirs-container {
     flex-direction: column;
-    align-items: center;
+    overflow-x: visible;
   }
 
-.loisir-card {
-    width: 100%;
-    min-height: auto;
-  }
-
-.lecture, .Music, .Dessin {
+  .lecture,
+  .Music,
+  .Dessin {
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
     min-height: auto;
-    border-top-width: 10px;
-    border-bottom-width: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* tes valeurs 500px/100px étaient invalides */
   }
 
-.lecture.open, .Music.open, .Dessin.open {
+  .lecture.open,
+  .Music.open,
+  .Dessin.open {
     width: 100%;
-    transform: translateY(-4px) scale(1);
+    transform: none;
   }
 
-  /* ===== TABLEAU ===== */
-  table {
-    width: 100%;
-    font-size: 0.85rem;
-  }
-
-  /* ===== CONTACTS ===== */
-  .Contacts {
-    border-top-width: 10px;
-    border-bottom-width: 10px;
-    padding: 15px;
-  }
-
-  /* ===== A PROPOS ===== */
+  /* Bloc "à propos" : les deux colonnes passent en pleine largeur */
   .apropos-container {
     flex-direction: column;
-    gap: 20px;
+    align-items: stretch;
   }
 
   .parcours-block,
   .formation-block {
     width: 100%;
-    min-width: unset;
+    min-width: 0;
+  }
+
+  /* Cartes générales : réduire la bordure gauche épaisse */
+  .Moi,
+  .qui,
+  .parcours,
+  .points,
+  .competence,
+  .projets {
+    border-left-width: 20px;
+    padding: 15px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
   }
 }
+
+@media (max-width: 480px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .lecture,
+  .Music,
+  .Dessin {
+    padding: 12px;
+  }
+}
+
 @keyframes fadeIn {
    from{
     opacity:0
