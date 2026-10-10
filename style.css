@@ -1,440 +1,210 @@
-/* ===== REINITIALISATION ET BASE ===== */
 * {
   margin: 0;
-  padding: 2;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  color: #000000;
-  background-color: #e1e0d9;
+:root {
+  --violet-dark: #2A1E4A;
+  --violet-light: #A78BFA;
+  --lavender: #C7B8FF;
+  --yellow: #F7C948;
+  --white: #ffffff;
 }
 
-img{
-  border: 3px solid #000000;
-  max-width: 100%;
-  height: auto;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--violet-dark);
+  color: var(--white);
+  font-size: 18px;
+}
+
+.logo-nav img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.15);
+    padding: 6px;
+    transition: 0.3s;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.logo-nav img:hover {
+    background-color: var(--yellow);
+    transform: scale(1.1);
+}
+
+
+header {
+  background-color: var(--violet-dark);
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--white);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--yellow);
 }
 
 header img {
-  display: block;
-  margin: 0 auto;
-} 
-
- /* ===== NAVIGATION ===== */
-nav {
-  margin-top: 15px;
+  border-radius: 12px;
+  margin: 15px auto;
 }
- 
+
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 0;
-}
- 
-nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
- 
-nav a:hover {
-  background-color: rgba(14, 41, 239, 0.2);
+  gap: 25px;
+  margin-bottom: 20px;
 }
 
-/* ===== HEADER ===== */
-header {
-  background-image: url("image_site/coding_backgroud.2.png");
-  background-repeat:no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #0a1a2f;
-  color: #f9f9f9;
-  padding: 30px 40px;
-  min-height: 100px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  min-height: 300px;
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.1);
+  transition: 0.3s;
 }
- 
-header h1 {
-  animation: fadeIn 1s;
-  font-size: 2rem;
-  margin-bottom: 8px;
+
+nav a:hover {
+  background-color: var(--yellow);
+  color: var(--violet-dark);
 }
- 
-/* ===== CONTENU PRINCIPAL ===== */
+
 main {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
- 
+
 h2 {
-  color: #050506;
-  border-bottom: 2px solid #286b7b;
-  padding-bottom: 8px;
-  margin: 50px 0 15px 0;
+  color: var(--yellow);
+  margin: 40px 0 15px;
+  font-size: 1.6rem;
 }
- 
-/* ===== CARTES  ===== */
-.Moi{
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 50px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.Moi {
+
+.Moi, .qui, .points, .parcours, .competence, .projets, .Flyer, .Chifumi {
+  background: var(--violet-light);
+  color: var(--violet-dark);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   transition: transform 0.2s;
 }
-.Moi:hover { 
+
+.Moi:hover, .qui:hover, .points:hover, .parcours:hover,
+.competence:hover, .projets:hover, .Flyer:hover, .Chifumi:hover {
   transform: translateY(-4px);
-} 
-.qui {
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 50px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.qui {
-  transition: transform 0.2s;
-}
-.qui:hover { 
-  transform: translateY(-4px);
-} 
+
 
 .loisirs-container {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
 }
 
-.loisir-card {
-  min-height: 450px;
-  width: 300px;
-  display: inline-block;
-}
-
-.lecture {
-  background: #ffffff;
-  border-bottom: 50px solid #206012;
-  border-left: 2px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 20px solid #206012;
+.lecture img,
+.Music img,
+.Dessin img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
-  padding: 16px;
-  margin-bottom: 50px;
-  width: 350px; 
-  display: inline-block;
-  box-shadow: 0 500px 500px rgba(0, 0, 0, 0.1);
-  min-height: 450px;
+  display: block;
 }
-.lecture {
-  transition: transform 0.2s;
+
+.details_lecture,
+.details_music,
+.details_dessin {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
-.lecture:hover { 
-  transform: translateY(-4px);
-} 
+
 .lecture.open .details_lecture {
-  max-height: 300px; 
-}
-.lecture.open {
-  transform: translateY(-10px) scale(1.02);
-  width: 610px;
-  display: inline-block;
-}
-.details_lecture{
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  max-height: 300px;
 }
 
-.Music {
-  background: #ffffff;
-  border-bottom: 50px solid #206012;
-  border-left: 2px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 20px solid #206012;
-  border-radius: 10px;
-  padding: 16px;
-  margin-bottom: 50px;
-  width: 350px; 
-  display: inline-block;
-  box-shadow: 100 10px 100px rgba(0, 0, 0, 0.1);
-  min-height: 450px
-}
-.Music {
-  transition: transform 0.2s;
-}
-.Music:hover { 
-  transform: translateY(-4px);
-} 
 .Music.open .details_music {
-  max-height: 300px; 
-}
-.Music.open {
-  transform: translateY(-10px) scale(1.02);
-  width: 610px;
-  display: inline-block;
-}
-.details_music{
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  max-height: 300px;
 }
 
-.Dessin {
-  background: #ffffff;
-  border-bottom: 50px solid #206012;
-  border-left: 2px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 20px solid #206012;
-  border-radius: 10px;
-  padding: 16px;
-  margin-bottom: 50px;
-  width: 350px; 
-  display: inline-block;
-  box-shadow: 100 10px 100px rgba(0, 0, 0, 0.1);
-  min-height: 450px
-}
-.Dessin {
-  transition: transform 0.2s;
-}
-.Dessin:hover { 
-  transform: translateY(-4px);
-} 
 .Dessin.open .details_dessin {
-  max-height: 300px; 
+  max-height: 300px;
 }
-.Dessin.open {
-  transform: translateY(-10px) scale(1.02);
-  width: 610px;
-  display: inline-block;
-}
-.details_dessin{
-  max-height: 0;
+
+/* Empêche les cards de s'étirer */
+.lecture,
+.Music,
+.Dessin {
+  min-height: 450px;
   overflow: hidden;
-  transition: max-height 0.3s ease;
 }
 
-.parcours {
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 50px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Texte limité pour garder les cards égales */
+.lecture p,
+.Music p,
+.Dessin p {
+  overflow: visible;
 }
-.parcours {
-  transition: transform 0.2s;
-}
-.parcours:hover { 
-  transform: translateY(-4px);
-} 
 
-.points {
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 50px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.points {
-  transition: transform 0.2s;
-}
-.points:hover { 
-  transform: translateY(-4px);
-} 
-
-.competence {
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 50px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.competence {
-  transition: transform 0.2s;
-}
-.competence:hover { 
-  transform: translateY(-4px);
-} 
-
+/* Style du tableau dans la page A propos */
 table {
+    width: 100%;
     border-collapse: collapse;
-    background: #a5a5a2;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 10px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-td {
-    border: 3px solid #206012; 
+    margin: 30px 0; /* espace avant et après */
 }
 
-table {
-  transition: transform 0.2s;
+table th, table td {
+    border: 2px solid rgba(255,255,255,0.25);
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
 }
-table:hover { 
-  transform: translateY(-4px);
-} 
-.titre_contacts {
-  border-left: 2px solid #286b7b;
-}
-.Contacts {
-  background: #ffffff;
-  border-bottom: 20px solid #206012;
-  border-left: 2px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 20px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
- }
-.Contacts {
-  transition: transform 0.2s;
+table th {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--yellow);
+    font-size: 1.1rem;
 }
-.Contacts:hover { 
-  transform: translateY(-4px);
-} 
-.apropos-container {
-  display: flex;
-  gap: 40px;        /* espace entre les deux blocs */
-  align-items: flex-start; /* alignement en haut */
-  justify-content: center; /* centrer sur la page */
-  flex-wrap: wrap;  /* pour que ça s’adapte sur petit écran */
-}
-.parcours-block,
-.formation-block {
-  width: 45%; /* ou 40%, ou 50% selon ton design */
-  min-width: 300px; /* pour éviter que ça casse sur petit écran */
-}
-.projets {
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 50px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.projets {
-  transition: transform 0.2s;
-}
-.projets:hover { 
-  transform: translateY(-4px);
-} 
 
-.Flyer {
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 2px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.Flyer {
-  transition: transform 0.2s;
-}
-.Flyer:hover { 
-  transform: translateY(-4px);
-} 
 
-.Chifumi {
-  background: #ffffff;
-  border-bottom: 2px solid #206012;
-  border-left: 2px solid #206012;
-  border-right: 2px solid #206012;
-  border-top: 2px solid #206012;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.Chifumi {
-  transition: transform 0.2s;
-}
-.Chifumi:hover { 
-  transform: translateY(-4px);
-} 
-
-button {
-  background:#286b7b;
-  text-decoration: none ;
-  color:#ffffff;
-  padding:13px 30px;
-  font-weight: bold;
-  border-radius: 25px;
-  transition: .4s;
-}
-    
-/* ===== FOOTER ===== */
 footer {
-  background-color: #000000;
-  color: white;
-  text-align: center;}
+  background-color: var(--violet-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+}
 
-@media (max-width: 768px) {
-
- nav ul {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  header {
-    padding: 20px;
-    min-height: 200px;
+@media screen and (max-width: 768px) {
+  /* Exemple : nav en colonne */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
   }
 
   header h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    text-align: center;
   }
 
-  main {
-    padding: 0 15px;
-    margin: 20px auto;
-  }
-
-  /* Cartes de loisirs : passage en pleine largeur */
   .loisirs-container {
     flex-direction: column;
+    gap: 15px;
     overflow-x: visible;
   }
 
@@ -442,76 +212,6 @@ footer {
   .Music,
   .Dessin {
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
     min-height: auto;
   }
-
-  .lecture.open,
-  .Music.open,
-  .Dessin.open {
-    width: 100%;
-    transform: none;
-  }
-
-  /* Bloc "à propos" : les deux colonnes passent en pleine largeur */
-  .apropos-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .parcours-block,
-  .formation-block {
-    width: 100%;
-    min-width: 0;
-  }
-
-  /* Cartes générales : réduire la bordure gauche épaisse */
-  .Moi,
-  .qui,
-  .parcours,
-  .points,
-  .competence,
-  .projets {
-    border-left-width: 20px;
-    padding: 15px;
-  }
-
-  table {
-    width: 100%;
-    font-size: 14px;
-    overflow-x: auto;
-    display: block;
-  }
 }
-
-@media (max-width: 480px) {
-
-  body {
-    font-size: 15px;
-  }
-
-  header h1 {
-    font-size: 1.2rem;
-  }
-
-  nav a {
-    padding: 6px 10px;
-    font-size: 14px;
-  }
-
-  .lecture,
-  .Music,
-  .Dessin {
-    padding: 12px;
-  }
-}
-
-@keyframes fadeIn {
-   from{
-    opacity:0
-  } 
-  to{
-    opacity:1
-  } 
-}  
