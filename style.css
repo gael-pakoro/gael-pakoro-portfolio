@@ -147,7 +147,6 @@ h2 {
   max-height: 300px;
 }
 
-/* Empêche les cards de s'étirer */
 .lecture,
 .Music,
 .Dessin {
@@ -155,14 +154,80 @@ h2 {
   overflow: hidden;
 }
 
-/* Texte limité pour garder les cards égales */
 .lecture p,
 .Music p,
 .Dessin p {
   overflow: visible;
 }
 
-/* Style du tableau dans la page A propos */
+.Contacts {
+    background-image: url("image_site/Fond_contact.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px 0;        
+    min-height: 230px;      
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.contact-list {
+    display: flex;
+    gap: 40px;              
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.Contacts img {
+    width: 55px;            
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover img {
+    transform: scale(1.15);
+}
+
+.contact-item span {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--black);
+    font-size: 16px;
+}
+
+.mail .mail-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mail:hover .mail-text {
+    opacity: 1;
+}
+
+.phone {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
