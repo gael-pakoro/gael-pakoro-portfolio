@@ -182,6 +182,30 @@ table th {
     font-size: 1.1rem;
 }
 
+.button button {
+    background-color: var(--yellow);
+    color: #2c0050; /* ton violet foncé */
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px; /* rond */
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(255,255,0,0.3);
+}
+
+.button button:hover {
+    background-color: #ffd84d; /* jaune plus clair */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,0,0.5);
+}
+
+.button {
+    text-align: center; /* centre le bouton */
+    margin: 20px 0;
+}
+
 
 footer {
   background-color: var(--violet-dark);
